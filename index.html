@@ -8,7 +8,7 @@
 	<body>
 		<div class="js-page">
   			<main class="js-document">
-    			<button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir</button>
+    			<button class="myButton" type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir</button>
  			</main>
   			<div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="	true" tabindex="-1" class="c-dialog">
    				 <div role="document" class="c-dialog__box">
@@ -21,7 +21,7 @@
           					<input type="text" id="email" />
         				</p>
         				<p>
-          					<input type="submit" value="envoyer" name="envoyer" data-dismiss="dialog">
+          					<input disabled type="submit" value="envoyer" id="validate" name="envoyer" data-dismiss="dialog">
         				</p>
       				</form>
     			</div>
