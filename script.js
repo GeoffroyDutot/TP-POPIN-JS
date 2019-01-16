@@ -1,7 +1,7 @@
 const triggers = document.querySelectorAll('[aria-haspopup="dialog"]');
 const doc = document.querySelector('.js-document');
 const focusableElementsArray = [
-  '[href]',
+
   'button:not([disabled])',
   'input:not([disabled])',
   'select:not([disabled])',
@@ -81,14 +81,14 @@ triggers.forEach((trigger) => {
       event.preventDefault();
 
       open(dialog);
-    }  
+    }
   });
 
   // close dialog
   dialog.addEventListener('keydown', (event) => {
     if (event.which === keyCodes.escape) {
       close(dialog, trigger);
-    }      
+    }
   });
 
   dismissTriggers.forEach((dismissTrigger) => {
@@ -105,5 +105,5 @@ triggers.forEach((trigger) => {
     if (event.target === dialog) {
       close(dialog, trigger);
     }
-  }); 
+  });
 });
