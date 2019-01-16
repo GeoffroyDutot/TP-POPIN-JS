@@ -1,0 +1,36 @@
+/*Arriere plan*/
+.c-dialog {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding: 2.4rem;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: black;
+  opacity: 0.9;
+  transition: .2s;
+}
+
+/*pop in*/
+.c-dialog__box {
+  flex: 1;
+  max-width: 600px;
+  max-height: 450px;
+  margin: auto;
+  padding: 2.4rem;
+  background-color: white;
+}
+
+.bouton {
+  float: right;
+}
+
+/*Fermuture de pop-in*/
+.c-dialog[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0;
+}

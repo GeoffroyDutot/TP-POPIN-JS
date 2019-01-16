@@ -3,10 +3,29 @@
 	<head>
     	<meta charset="utf-8">
     	<link rel="stylesheet" type="text/css" href="style.css" />
+    	<title>POP-IN</title>
 	</head>
 	<body>
-		<div>
-			
+		<div class="js-page">
+  			<main class="js-document">
+    			<button type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir</button>
+ 			</main>
+  			<div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="	true" tabindex="-1" class="c-dialog">
+   				 <div role="document" class="c-dialog__box">
+      				<button class="bouton" type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="dialog">X</button>
+      				<h2 id="dialog-title"></h2>
+      				<p id="dialog-desc">Entrez votre adresse mail.</p>
+      				<form action="" method="post">
+        				<p>
+          					<label for="email">Email</label><br />
+          					<input type="email" id="email" />
+        				</p>
+        				<p>
+          					<button type="submit">Envoyer</button>
+        				</p>
+      				</form>
+    			</div>
+  			</div>
 		</div>
     <script src="script.js" type="application/javascript"></script>
 	</body>
