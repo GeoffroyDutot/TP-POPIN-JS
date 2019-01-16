@@ -1,32 +1,35 @@
 <!doctype html>
 <html>
 	<head>
-    	<meta charset="utf-8">
-    	<link rel="stylesheet" type="text/css" href="style.css" />
-    	<title>POP-IN</title>
+		<meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="style.css" />
+  	<title>POP-IN</title>
 	</head>
 	<body>
-		<div class="js-page">
-  			<main class="js-document">
-    			<button class="myButton" type="button" aria-haspopup="dialog" aria-controls="dialog">Ouvrir</button>
- 			</main>
-  			<div id="dialog" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="	true" tabindex="-1" class="c-dialog">
-   				 <div role="document" class="c-dialog__box">
-      				<button class="bouton" type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="dialog">X</button>
-      				<h2 id="dialog-title"></h2>
-      				<h1 id="dialog-desc">Entrez votre adresse mail.</h1>
-      				<form action="" method="post">
-        				<p>
-          					<label for="email">Email</label><br />
-          					<input type="text" id="email" />
-        				</p>
-        				<p>
-          					<input disabled type="submit" value="envoyer" id="validate" name="envoyer" data-dismiss="dialog">
-        				</p>
-      				</form>
-    			</div>
-  			</div>
-		</div>
+		<button
+      id="openDialogButton"
+      type="button"
+      onclick="toggleDialog(true)" >
+      Ouvrir
+    </button>
+
+    <div id="overlay" aria-hidden="true">
+  		<div id="dialog">
+  			<button id="closeDialogButton" type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" onclick="toggleDialog(false)">X</button>
+  			<h2 id="dialog-title"></h2>
+  			<h1 id="dialog-desc">Entrez votre adresse mail.</h1>
+  			<form action="" method="post">
+  			 <p>
+    			 <label for="email">Email</label><br />
+    			 <input type="text" id="email" />
+  			 </p>
+  			 <p>
+  	      <input disabled type="submit" value="envoyer" id="validate" name="envoyer" onclick="toggleDialog(false)">
+  			 </p>
+  			</form>
+      </div>
+    </div>
+
     <script src="script.js" type="application/javascript"></script>
 	</body>
 </html>
