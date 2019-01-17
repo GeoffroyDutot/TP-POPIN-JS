@@ -24,5 +24,5 @@ document.querySelector('#email').addEventListener('keyup', function(){
 	})
 document.querySelector('form').addEventListener('submit', function(e){
     e.preventDefault()
-    console.log("coucou")
+    document.getElementById('msg_validate').innerHTML= "Email enregistré !"
 })
