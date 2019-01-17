@@ -19,7 +19,10 @@ document.onkeydown = (e) => {
   }
 }
 
-document.querySelector('#email').addEventListener('input', function(){
-  event.preventDefault()
+document.querySelector('#email').addEventListener('keyup', function(){
 		ValidateEmail();
 	})
+document.querySelector('form').addEventListener('submit', function(e){
+    e.preventDefault()
+    console.log("coucou")
+})
