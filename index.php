@@ -18,10 +18,10 @@
   			<button id="closeDialogButton" type="button" aria-label="Fermer" title="Fermer la fenêtre">X</button>
   			<h2 id="dialog-title"></h2>
   			<h1 id="dialog-desc">Entrez votre adresse mail.</h1>
-  			<form action="" method="post">
+  			<form action="" id="formulaire" method="post">
   			 <p>
     			 <label for="email">Email</label><br />
-    			 <input type="text" name='e_mail' id="email" />
+    			 <input type="text" name='email' id="email" />
   			 </p>
   			 <p>
   	      <input disabled type="submit" value="envoyer" id="validate" name="envoyer">

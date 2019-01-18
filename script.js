@@ -17,36 +17,31 @@ document.onkeydown = (e) => {
     }
 }
 
-document.querySelector('#email').addEventListener('keyup', function(){
+document.getElementById('email').addEventListener('keyup', function(){
 		ValidateEmail();
 	})
-document.querySelector('validate').addEventListener('submit', function(e){
-          alert("oui")
+document.getElementById('formulaire').addEventListener('submit', function(e){
     e.preventDefault()
     $.ajax({
     method: "POST",
     url: "email.php",
-    data: {name :'email': document.getElementById('email').value} ,
+    data: {'email': document.getElementById('email').value} ,
     dataType: 'text',
-    sucess:function(retour_php){
+    sucess: function(retour_php){
+
         if (retour_php == "OK"){
           document.getElementById('msg_validate').innerHTML= "Votre adresse mail à été enregistrée"}
         else {
           document.getElementById('msg_validate').innerHTML= "Une erreur s'est produite (PHP)"}
     },
     error:function(){
+      alert("test")
         document.getElementById('msg_validate').innerHTML = "Une erreur s'est produite (Ajax)"}
     })
+      toggleDialog(false)
+
 })
 
 document.getElementById('openDialogButton').onclick = function() {
   toggleDialog(true)
-}
-
-document.getElementById('closeDialogButton').onclick = function() {
-  toggleDialog(false)
-}
-
-document.getElementById('validate').onclick = function() {
-  toggleDialog(false)
 }

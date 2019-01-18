@@ -8,7 +8,7 @@ try {
     die();
 }
 
-    $email = htmlspecialchars($_POST['e_mail']);
+    $email = htmlspecialchars($_POST['email']);
 
     $insertmbr = $bdd->prepare("INSERT INTO email(email) VALUES(?)");
     $insertmbr->execute(array(
