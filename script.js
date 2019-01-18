@@ -27,7 +27,7 @@ document.getElementById('formulaire').addEventListener('submit', function(e){
     url: "email.php",
     data: {'email': document.getElementById('email').value} ,
     dataType: 'text',
-    sucess: function(retour_php){
+    success: function(retour_php){
 
         if (retour_php == "OK"){
           document.getElementById('msg_validate').innerHTML= "Votre adresse mail à été enregistrée"}
