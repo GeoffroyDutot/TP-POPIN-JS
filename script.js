@@ -45,3 +45,6 @@ document.getElementById('formulaire').addEventListener('submit', function(e){
 document.getElementById('openDialogButton').onclick = function() {
   toggleDialog(true)
 }
+document.getElementById('closeDialogButton').onclick = function() {
+  toggleDialog(false)
+}
